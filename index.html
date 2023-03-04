@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wardrobe</title>
+    <script>
+        function date(){
+        const today = new Date();
+        let day = today.getDay();
+        let month = today.getMonth();
+        let year = today.getFullYear();
+        day = checkTime(day);
+        month = checkTime(month);
+        document.getElementById("dt").innerHTML = "Date: "+day+"/"+month+"/"+year;
+        setTimeout(date,1000);
+        
+    }
+    
+    function startTime() {
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('time').innerHTML ="Time: "+  h + ":" + m + ":" + s;
+        setTimeout(startTime, 1000);
+        }
+        
+        function checkTime(i) {
+            if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+        }
+        
+        </script>
+        <style>
+            body{
+                color: white;
+                background-color: black;
+            }
+            .container{
+                /* border:2px solid black; */
+                height: fit-content;
+                /* width: fit-content; */
+                padding: 10px;
+            }
+            .head{
+                text-align: center;
+            }
+            table{
+                margin: auto;
+            }
+            table,tr,td{
+                border: 2px solid red;
+                border-collapse: collapse;
+                padding: 4px;
+                text-align: center;
+            }
+            a{
+                color: greenyellow;
+                text-decoration: none;
+            }
+            .box{
+                /* border: 2px solid white; */
+                /* margin: auto; */
+                padding: 10px;
+                margin: 4px;
+            }
+            .links{
+                /* border: 2px solid white; */
+                /* margin: auto; */
+                padding: 10px;
+                margin: auto;
+                width: fit-content;
+            }
+        </style>
+</head>
+<body onload="startTime(),date()">
+    <div class="container">
+        <div class="head">
+            <h1>----Wardrobe----</h1>
+            <!-- showing the time -->
+            <p id="time"></p>    
+             <!--showing the date  -->
+            <p id="dt"></p>     
+        </div>
+        <div class="box">
+           
+            <table>
+                <tr>
+                    <th>Month</th>
+                    <th>Data</th>
+                </tr>
+                <tr>
+                    <td>January</td>
+                    <td><a target="_blank" href="">-</a></td>
+                </tr>
+                <tr>
+                    <td>February</td>
+                    <td><a target="_blank" href="">-</a></td>
+                </tr>
+                <tr>
+                    <td>March</td>
+                    <td><a target="_blank" href="https://1drv.ms/x/s!AmEQGOUiPvtjiRZ5u7GqRKuKKmBn">March</a></td>
+                </tr>
+                <tr>
+                    <td>April</td>
+                    <td><a target="_blank" href="">-</a></td>
+                </tr>
+                <tr>
+                    <td>May</td>
+                    <td><a target="_blank" href="">-</a></td>
+                </tr>
+                <tr>
+                    <td>June</td>
+                    <td><a target="_blank" href="">-</a></td>
+                </tr>
+                <tr>
+                    <td>July</td>
+                    <td><a target="_blank" href="">-</a></td>
+                </tr>
+                <tr>
+                    <td>August</td>
+                    <td><a target="_blank" href="">-</a></td>
+                </tr>
+                <tr>
+                    <td>September</td>
+                    <td><a target="_blank" href="">-</a></td>
+                </tr>
+                <tr>
+                    <td>October</td>
+                    <td><a target="_blank" href="">-</a></td>
+                </tr>
+                <tr>
+                    <td>November</td>
+                    <td><a target="_blank" href="">-</a></td>
+                </tr>
+                <tr>
+                    <td>December</td>
+                    <td><a target="_blank" href="">-</a></td>
+                </tr>
+            </table>
+            <div class="links">
+                <p>College Site: <a class="color" target="_blank" href="https://www.soa.ac.in/iter">SOA_ITER</a></p>
+                <p>Student Portal: <a target="_blank" href="http://115.240.101.71:8282/CampusPortalSOA/index#/"><img style="width: 40px;" src="https://png.pngtree.com/png-vector/20190223/ourmid/pngtree-student-glyph-black-icon-png-image_691145.jpg" alt=""></a></p>
+                <p>Zoro:  <a target="_blank" href="https://zoro.to/"><img style="width: 90px;" src="https://zoro.to/images/logo.png" alt="zoro"></a></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
